@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>All BOOKS</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>     </th>
+
+        <tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td><b>Take book</b></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+        <h1>AVAILABLE BOOKS</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Availble</th>
+            <th>     </th>
+
+        <tr>
+    </thead>
+    <tbody>
+        {% for history in history %}
+        <tr>
+            <td>{{ history.title }}</td>
+            <td>{{ history.author }}</td>
+            <td>{{ history.type }}</td>
+            <td><b>Take book</b></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+
+{% endblock %}
