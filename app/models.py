@@ -3,7 +3,11 @@ from hashlib import md5
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import db, login
 from flask_login import UserMixin
-tab=34
+
+
+aws_access_key_id = AeeeeeeeQPZ7QSeeeeeeZL
+aws_secret_access_key = dsfddopdgidigdpigpdgidpgidpi
+
 class User(UserMixin,db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(64), index=True, unique=True)
